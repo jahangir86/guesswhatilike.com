@@ -49,6 +49,12 @@
             document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
         });
     </script>
+    
+    <!-- Vercel Analytics -->
+    <script type="module">
+        import { inject } from '@vercel/analytics';
+        inject();
+    </script>
 </head>
 
 <body class="bg-[#F0EEE9] text-[#1A1714] antialiased selection:bg-[#FF6B35] selection:text-white overflow-x-hidden">
