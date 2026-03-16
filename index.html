@@ -1,13 +1,17 @@
-<html lang="en" class="scroll-smooth"><head>
+<html lang="en" class="scroll-smooth">
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>GWIL · Guess What I Like</title>
-    
+
     <!-- Friendly, rounded Google Fonts for Kian's voice -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&amp;family=Nunito:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&amp;family=Nunito:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 
@@ -15,26 +19,36 @@
         body {
             font-family: 'Nunito', sans-serif;
         }
+
         .font-handwriting {
             font-family: 'Caveat', cursive;
         }
-        
+
         /* Gentle fade-in animations */
         .fade-in-up {
             opacity: 0;
             transform: translateY(24px);
             transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
         }
+
         .fade-in-up.animate {
             opacity: 1;
             transform: translateY(0);
         }
-        
-        .delay-100 { transition-delay: 100ms; }
-        .delay-200 { transition-delay: 200ms; }
-        .delay-300 { transition-delay: 300ms; }
+
+        .delay-100 {
+            transition-delay: 100ms;
+        }
+
+        .delay-200 {
+            transition-delay: 200ms;
+        }
+
+        .delay-300 {
+            transition-delay: 300ms;
+        }
     </style>
-    
+
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const observer = new IntersectionObserver((entries) => {
@@ -45,11 +59,11 @@
                     }
                 });
             }, { threshold: 0.15, rootMargin: "0px 0px -50px 0px" });
-            
+
             document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
         });
     </script>
-    
+
     <!-- Vercel Analytics -->
     <script type="module">
         import { inject } from '@vercel/analytics';
@@ -60,18 +74,25 @@
 <body class="bg-[#F0EEE9] text-[#1A1714] antialiased selection:bg-[#FF6B35] selection:text-white overflow-x-hidden">
 
     <!-- TOP NAVIGATION -->
-    <nav class="fixed top-0 inset-x-0 z-50 bg-[#F0EEE9]/90 backdrop-blur-md border-b border-[#1A1714]/10 transition-all duration-300">
+    <nav
+        class="fixed top-0 inset-x-0 z-50 bg-[#F0EEE9]/90 backdrop-blur-md border-b border-[#1A1714]/10 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <a href="index.html" class="flex flex-col items-start leading-none group">
                 <div class="text-3xl lg:text-4xl font-black tracking-tighter font-sans">
-                    <span class="text-[#FC6F61]">G</span><span class="text-[#1DCBAD]">W</span><span class="text-[#F1DA56]">I</span><span class="text-[#9C62C5]">L</span>
+                    <span class="text-[#FC6F61]">G</span><span class="text-[#1DCBAD]">W</span><span
+                        class="text-[#F1DA56]">I</span><span class="text-[#9C62C5]">L</span>
                 </div>
-                <span class="text-[0.65rem] font-bold text-[#1A1714] uppercase tracking-[0.2em] mt-1 transition-colors">GUESS WHAT I LIKE</span>
+                <span
+                    class="text-[0.65rem] font-bold text-[#1A1714] uppercase tracking-[0.2em] mt-1 transition-colors">GUESS
+                    WHAT I LIKE</span>
             </a>
             <div class="flex items-center gap-6 sm:gap-8">
                 <a href="index.html" class="text-[#1A1714] font-semibold transition-colors">App</a>
-                <a href="#story" class="text-[#1A1714]/70 hover:text-[#1A1714] font-semibold transition-colors">Meet the Creator</a>
-                <a href="#download" class="bg-[#1A1714] text-white px-6 py-2.5 rounded-full font-semibold hover:bg-[#1A1714]/80 transition-colors hidden sm:block">Get App</a>
+                <a href="#story" class="text-[#1A1714]/70 hover:text-[#1A1714] font-semibold transition-colors">Meet the
+                    Creator</a>
+                <a href="#download"
+                    class="bg-[#1A1714] text-white px-6 py-2.5 rounded-full font-semibold hover:bg-[#1A1714]/80 transition-colors hidden sm:block">Get
+                    App</a>
             </div>
         </div>
     </nav>
@@ -79,83 +100,93 @@
     <!-- SECTION 1: App Hero -->
     <main class="relative pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden px-6 bg-[#F0EEE9]">
         <div class="max-w-7xl mx-auto w-full relative z-10 flex flex-col items-center">
-            
+
             <!-- Hero Text Centered -->
             <div class="text-center flex flex-col items-center mb-24 fade-in-up w-full">
                 <!-- Decorative background blob -->
-                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] h-[80%] bg-gradient-to-tr from-[#FF6B35]/10 to-[#7C4DFF]/10 rounded-full blur-3xl -z-10"></div>
-                
-                <div class="inline-flex items-center gap-2 rounded-full bg-white/60 backdrop-blur-md border border-white/40 px-5 py-2 text-sm font-bold text-[#1A1714] mb-8 shadow-sm">
+                <div
+                    class="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] h-[80%] bg-gradient-to-tr from-[#FF6B35]/10 to-[#7C4DFF]/10 rounded-full blur-3xl -z-10">
+                </div>
+
+                <div
+                    class="inline-flex items-center gap-2 rounded-full bg-white/60 backdrop-blur-md border border-white/40 px-5 py-2 text-sm font-bold text-[#1A1714] mb-8 shadow-sm">
                     <span class="text-[#FF6B35]">#1</span> Social Game
                 </div>
-                
-                <h1 class="text-6xl md:text-[5.5rem] lg:text-[7rem] font-black tracking-tight text-[#1A1714] mb-8 leading-[1.05] max-w-4xl mx-auto">
-                    Do they really<br/>know you?
+
+                <h1
+                    class="text-6xl md:text-[5.5rem] lg:text-[7rem] font-black tracking-tight text-[#1A1714] mb-8 leading-[1.05] max-w-4xl mx-auto">
+                    Do they really<br />know you?
                 </h1>
-                
-                <p class="text-xl md:text-2xl text-[#1A1714]/70 font-medium mb-12 max-w-2xl mx-auto leading-relaxed mix-blend-multiply">
+
+                <p
+                    class="text-xl md:text-2xl text-[#1A1714]/70 font-medium mb-12 max-w-2xl mx-auto leading-relaxed mix-blend-multiply">
                     Pick your top 3. Guess theirs. Find out if your groupchat actually passes the vibe check.
                 </p>
-                
+
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="#download" class="inline-flex items-center justify-center gap-2 bg-[#1A1714] text-white rounded-full px-8 py-4 text-lg font-bold shadow-xl hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 w-full sm:w-auto">
+                    <a href="#download"
+                        class="inline-flex items-center justify-center gap-2 bg-[#1A1714] text-white rounded-full px-8 py-4 text-lg font-bold shadow-xl hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 w-full sm:w-auto">
                         <iconify-icon icon="ic:baseline-apple" class="text-3xl text-white"></iconify-icon>
                         iOS App
                     </a>
-                    <a href="https://buymeacoffee.com/kian_jahangir" target="_blank" class="relative overflow-hidden inline-flex flex-col items-center justify-center pt-[10px] pb-[6px] px-8 bg-white text-[#1A1714] border-2 border-[#1A1714]/10 rounded-full shadow-sm hover:-translate-y-1 hover:shadow-md hover:border-[#FF6B35]/30 transition-all duration-300 w-full sm:w-auto group">
-                        <!-- Coming Soon Ribbon -->
-                        <div class="absolute -right-8 top-3 bg-[#FF6B35] text-white text-[0.6rem] font-black uppercase tracking-widest py-1 px-10 rotate-45 shadow-sm z-10 transition-transform group-hover:scale-110">
-                            SOON
-                        </div>
-                        <div class="flex items-center gap-2 opacity-40 relative z-0">
-                            <iconify-icon icon="uiw:android" class="text-3xl"></iconify-icon>
-                            <span class="text-lg font-bold line-through decoration-[#1A1714]/50">Android</span>
-                        </div>
-                        <span class="text-[0.7rem] font-bold text-[#FF6B35] mt-0.5 uppercase tracking-wider group-hover:scale-105 transition-transform">Support to make it soon</span>
+                    <a href="#download"
+                        class="inline-flex items-center justify-center gap-2 bg-white text-[#1A1714] border-2 border-[#1A1714]/10 rounded-full px-8 py-4 text-lg font-bold shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-300 w-full sm:w-auto">
+                        <iconify-icon icon="uiw:android" class="text-3xl text-[#1A1714]"></iconify-icon>
+                        Android App
                     </a>
                 </div>
             </div>
 
-            </div>
-            
+        </div>
+
         </div>
     </main>
 
     <!-- SECTION 2: Hero Story & Creator Intro -->
     <section id="story" class="relative py-24 lg:py-32 overflow-hidden px-6 bg-[#FFFDF9]">
-        <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10">
+        <div
+            class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10">
             <!-- Left Text -->
             <div class="text-center lg:text-left fade-in-up flex flex-col items-center lg:items-start">
-                <div class="inline-flex items-center gap-2 rounded-full bg-white/60 backdrop-blur-md border border-[#1A1714]/10 px-5 py-2 text-sm font-semibold text-[#1A1714] mb-8 shadow-sm transform -rotate-2">
+                <div
+                    class="inline-flex items-center gap-2 rounded-full bg-white/60 backdrop-blur-md border border-[#1A1714]/10 px-5 py-2 text-sm font-semibold text-[#1A1714] mb-8 shadow-sm transform -rotate-2">
                     <span>Hi, I'm Kian 👋</span>
                 </div>
-                
+
                 <h2 class="text-5xl md:text-7xl font-black tracking-tight text-[#1A1714] mb-6 leading-[1.05]">
-                    I'm 9 years old and I<br class="hidden lg:block"/> vibecoded this app.
+                    I'm 9 years old and I<br class="hidden lg:block" /> vibecoded this app.
                 </h2>
-                
-                <div class="space-y-6 text-lg md:text-xl text-[#1A1714]/80 font-medium leading-relaxed max-w-lg text-left md:text-left mix-blend-multiply">
-                    <p>I've been learning to code since I was 6. My teachers Katya, Alexander, and Danila taught me everything - thank you guys, you're the best 🙏</p>
-                    <p>I always wanted to know if my friends actually know what I like. But do they actually know my Top 3 favorite movies? My favorite music?</p>
+
+                <div
+                    class="space-y-6 text-lg md:text-xl text-[#1A1714]/80 font-medium leading-relaxed max-w-lg text-left md:text-left mix-blend-multiply">
+                    <p>I've been learning to code since I was 6. My teachers Katya, Alexander, and Danila taught me
+                        everything - thank you guys, you're the best 🙏</p>
+                    <p>I always wanted to know if my friends actually know what I like. But do they actually know my Top
+                        3 favorite movies? My favorite music?</p>
                     <p>Probably not. So I made a game to prove it.</p>
-                    <p>You both pick your Top 3 favorites. You both guess what the other one picked. Then you find out your GWIL Score.</p>
+                    <p>You both pick your Top 3 favorites. You both guess what the other one picked. Then you find out
+                        your GWIL Score.</p>
                 </div>
             </div>
-            
+
             <!-- Right Photo -->
             <div class="relative flex justify-center fade-in-up delay-200 mt-12 lg:mt-0">
                 <!-- Decorative background blob -->
-                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-[#FF6B35]/10 to-[#7C4DFF]/10 rounded-full blur-3xl -z-10"></div>
-                
+                <div
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-[#FF6B35]/10 to-[#7C4DFF]/10 rounded-full blur-3xl -z-10">
+                </div>
+
                 <!-- Photo frame -->
-                <div class="relative w-full max-w-[400px] aspect-[4/5] rounded-[3rem] p-4 bg-white/60 backdrop-blur-md border border-white shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
+                <div
+                    class="relative w-full max-w-[400px] aspect-[4/5] rounded-[3rem] p-4 bg-white/60 backdrop-blur-md border border-white shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
                     <img src="/kid.jpg" alt="Kian" class="w-full h-full object-cover rounded-[2rem]">
-                    <div class="absolute -bottom-6 -right-6 font-handwriting text-3xl text-[#FF6B35] transform -rotate-6">
+                    <div
+                        class="absolute -bottom-6 -right-6 font-handwriting text-3xl text-[#FF6B35] transform -rotate-6">
                         That's me! 🤙
                     </div>
                 </div>
             </div>
-            </div>
+        </div>
         </div>
     </section>
 
@@ -164,32 +195,54 @@
         <div class="max-w-7xl mx-auto w-full">
             <div class="w-full max-w-6xl mx-auto">
                 <div class="text-center mb-12 fade-in-up delay-100">
-                    <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-[#1A1714]">It's really easy, I promise.</h2>
+                    <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-[#1A1714]">It's really easy, I
+                        promise.</h2>
                 </div>
-                
+
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
                     <!-- Step 1 -->
-                    <div class="relative bg-white/90 backdrop-blur-md rounded-[2rem] p-8 shadow-sm border border-white fade-in-up delay-200 hover:shadow-md transition-all hover:-translate-y-1 duration-300 group overflow-hidden">
-                        <div class="absolute top-6 right-6 text-5xl transform transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12 drop-shadow-sm">🎬</div>
-                        <div class="text-[#FF6B35] font-bold tracking-widest text-[11px] md:text-xs mb-3 uppercase">Step 1</div>
-                        <h3 class="text-xl md:text-2xl font-bold tracking-tight text-[#1A1714] mb-3 pr-16 bg-white/40 md:bg-transparent rounded-lg">Pick your Top 3</h3>
-                        <p class="text-[15px] text-[#1A1714]/70 font-medium leading-relaxed">Choose your faves in Movies, Music or Books. Be honest - no one's judging.</p>
+                    <div
+                        class="relative bg-white/90 backdrop-blur-md rounded-[2rem] p-8 shadow-sm border border-white fade-in-up delay-200 hover:shadow-md transition-all hover:-translate-y-1 duration-300 group overflow-hidden">
+                        <div
+                            class="absolute top-6 right-6 text-5xl transform transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12 drop-shadow-sm">
+                            🎬</div>
+                        <div class="text-[#FF6B35] font-bold tracking-widest text-[11px] md:text-xs mb-3 uppercase">Step
+                            1</div>
+                        <h3
+                            class="text-xl md:text-2xl font-bold tracking-tight text-[#1A1714] mb-3 pr-16 bg-white/40 md:bg-transparent rounded-lg">
+                            Pick your Top 3</h3>
+                        <p class="text-[15px] text-[#1A1714]/70 font-medium leading-relaxed">Choose your faves in
+                            Movies, Music or Books. Be honest - no one's judging.</p>
                     </div>
-                    
+
                     <!-- Step 2 -->
-                    <div class="relative bg-white/90 backdrop-blur-md rounded-[2rem] p-8 shadow-sm border border-white fade-in-up delay-300 hover:shadow-md transition-all hover:-translate-y-1 duration-300 group overflow-hidden">
-                        <div class="absolute top-6 right-6 text-5xl transform transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-12 drop-shadow-sm">👀</div>
-                        <div class="text-[#FF6B35] font-bold tracking-widest text-[11px] md:text-xs mb-3 uppercase">Step 2</div>
-                        <h3 class="text-xl md:text-2xl font-bold tracking-tight text-[#1A1714] mb-3 pr-16 bg-white/40 md:bg-transparent rounded-lg">Guess theirs</h3>
-                        <p class="text-[15px] text-[#1A1714]/70 font-medium leading-relaxed">What do YOU think your friend picked? They're guessing yours at the same time. No peeking.</p>
+                    <div
+                        class="relative bg-white/90 backdrop-blur-md rounded-[2rem] p-8 shadow-sm border border-white fade-in-up delay-300 hover:shadow-md transition-all hover:-translate-y-1 duration-300 group overflow-hidden">
+                        <div
+                            class="absolute top-6 right-6 text-5xl transform transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-12 drop-shadow-sm">
+                            👀</div>
+                        <div class="text-[#FF6B35] font-bold tracking-widest text-[11px] md:text-xs mb-3 uppercase">Step
+                            2</div>
+                        <h3
+                            class="text-xl md:text-2xl font-bold tracking-tight text-[#1A1714] mb-3 pr-16 bg-white/40 md:bg-transparent rounded-lg">
+                            Guess theirs</h3>
+                        <p class="text-[15px] text-[#1A1714]/70 font-medium leading-relaxed">What do YOU think your
+                            friend picked? They're guessing yours at the same time. No peeking.</p>
                     </div>
-                    
+
                     <!-- Step 3 -->
-                    <div class="relative bg-white/90 backdrop-blur-md rounded-[2rem] p-8 shadow-sm border border-white fade-in-up delay-400 hover:shadow-md transition-all hover:-translate-y-1 duration-300 group overflow-hidden">
-                        <div class="absolute top-6 right-6 text-5xl transform transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12 drop-shadow-sm">🎯</div>
-                        <div class="text-[#FF6B35] font-bold tracking-widest text-[11px] md:text-xs mb-3 uppercase">Step 3</div>
-                        <h3 class="text-xl md:text-2xl font-bold tracking-tight text-[#1A1714] mb-3 pr-16 bg-white/40 md:bg-transparent rounded-lg">See your Score</h3>
-                        <p class="text-[15px] text-[#1A1714]/70 font-medium leading-relaxed">The higher the score, the better you know each other. My dad got a 30% with me. Awkward.</p>
+                    <div
+                        class="relative bg-white/90 backdrop-blur-md rounded-[2rem] p-8 shadow-sm border border-white fade-in-up delay-400 hover:shadow-md transition-all hover:-translate-y-1 duration-300 group overflow-hidden">
+                        <div
+                            class="absolute top-6 right-6 text-5xl transform transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12 drop-shadow-sm">
+                            🎯</div>
+                        <div class="text-[#FF6B35] font-bold tracking-widest text-[11px] md:text-xs mb-3 uppercase">Step
+                            3</div>
+                        <h3
+                            class="text-xl md:text-2xl font-bold tracking-tight text-[#1A1714] mb-3 pr-16 bg-white/40 md:bg-transparent rounded-lg">
+                            See your Score</h3>
+                        <p class="text-[15px] text-[#1A1714]/70 font-medium leading-relaxed">The higher the score, the
+                            better you know each other. My dad got a 30% with me. Awkward.</p>
                     </div>
                 </div>
             </div>
@@ -200,42 +253,58 @@
     <section class="py-24 md:py-32 px-6 md:px-12 max-w-3xl mx-auto">
         <div class="text-center mb-12 fade-in-up">
             <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-[#1A1714]">What does your score mean?</h2>
-            <p class="font-handwriting text-3xl text-[#FF6B35] mt-6 transform rotate-1">I made these up. They're accurate.</p>
+            <p class="font-handwriting text-3xl text-[#FF6B35] mt-6 transform rotate-1">I made these up. They're
+                accurate.</p>
         </div>
-        
+
         <div class="space-y-4">
             <!-- Tier 1 -->
-            <div class="flex items-center gap-5 p-5 md:p-6 rounded-3xl bg-white/60 border border-white shadow-sm fade-in-up hover:bg-white/90 transition-colors">
+            <div
+                class="flex items-center gap-5 p-5 md:p-6 rounded-3xl bg-white/60 border border-white shadow-sm fade-in-up hover:bg-white/90 transition-colors">
                 <div class="text-3xl md:text-4xl shrink-0">🤯</div>
-                <div class="w-20 md:w-24 shrink-0 text-lg md:text-xl font-bold tracking-tight bg-gradient-to-r from-[#FF6B35] to-[#FF3D6B] bg-clip-text text-transparent">90-100%</div>
+                <div
+                    class="w-20 md:w-24 shrink-0 text-lg md:text-xl font-bold tracking-tight bg-gradient-to-r from-[#FF6B35] to-[#FF3D6B] bg-clip-text text-transparent">
+                    90-100%</div>
                 <div class="text-base md:text-lg font-semibold text-[#1A1714]">You basically share a brain</div>
             </div>
-            
+
             <!-- Tier 2 -->
-            <div class="flex items-center gap-5 p-5 md:p-6 rounded-3xl bg-white/60 border border-white shadow-sm fade-in-up delay-100 hover:bg-white/90 transition-colors">
+            <div
+                class="flex items-center gap-5 p-5 md:p-6 rounded-3xl bg-white/60 border border-white shadow-sm fade-in-up delay-100 hover:bg-white/90 transition-colors">
                 <div class="text-3xl md:text-4xl shrink-0">✅</div>
-                <div class="w-20 md:w-24 shrink-0 text-lg md:text-xl font-bold tracking-tight bg-gradient-to-r from-[#FF6B35] to-[#FF3D6B] bg-clip-text text-transparent opacity-90">70-89%</div>
+                <div
+                    class="w-20 md:w-24 shrink-0 text-lg md:text-xl font-bold tracking-tight bg-gradient-to-r from-[#FF6B35] to-[#FF3D6B] bg-clip-text text-transparent opacity-90">
+                    70-89%</div>
                 <div class="text-base md:text-lg font-semibold text-[#1A1714]">You actually know each other fr</div>
             </div>
-            
+
             <!-- Tier 3 -->
-            <div class="flex items-center gap-5 p-5 md:p-6 rounded-3xl bg-white/60 border border-white shadow-sm fade-in-up delay-200 hover:bg-white/90 transition-colors">
+            <div
+                class="flex items-center gap-5 p-5 md:p-6 rounded-3xl bg-white/60 border border-white shadow-sm fade-in-up delay-200 hover:bg-white/90 transition-colors">
                 <div class="text-3xl md:text-4xl shrink-0">👀</div>
-                <div class="w-20 md:w-24 shrink-0 text-lg md:text-xl font-bold tracking-tight bg-gradient-to-r from-[#FF6B35] to-[#FF3D6B] bg-clip-text text-transparent opacity-80">50-69%</div>
+                <div
+                    class="w-20 md:w-24 shrink-0 text-lg md:text-xl font-bold tracking-tight bg-gradient-to-r from-[#FF6B35] to-[#FF3D6B] bg-clip-text text-transparent opacity-80">
+                    50-69%</div>
                 <div class="text-base md:text-lg font-semibold text-[#1A1714]">Decent but room to grow</div>
             </div>
-            
+
             <!-- Tier 4 -->
-            <div class="flex items-center gap-5 p-5 md:p-6 rounded-3xl bg-white/60 border border-white shadow-sm fade-in-up delay-300 hover:bg-white/90 transition-colors">
+            <div
+                class="flex items-center gap-5 p-5 md:p-6 rounded-3xl bg-white/60 border border-white shadow-sm fade-in-up delay-300 hover:bg-white/90 transition-colors">
                 <div class="text-3xl md:text-4xl shrink-0">😬</div>
-                <div class="w-20 md:w-24 shrink-0 text-lg md:text-xl font-bold tracking-tight bg-gradient-to-r from-[#FF6B35] to-[#FF3D6B] bg-clip-text text-transparent opacity-70">30-49%</div>
+                <div
+                    class="w-20 md:w-24 shrink-0 text-lg md:text-xl font-bold tracking-tight bg-gradient-to-r from-[#FF6B35] to-[#FF3D6B] bg-clip-text text-transparent opacity-70">
+                    30-49%</div>
                 <div class="text-base md:text-lg font-semibold text-[#1A1714]">Do you even know this person?</div>
             </div>
-            
+
             <!-- Tier 5 -->
-            <div class="flex items-center gap-5 p-5 md:p-6 rounded-3xl bg-white/60 border border-white shadow-sm fade-in-up delay-300 hover:bg-white/90 transition-colors">
+            <div
+                class="flex items-center gap-5 p-5 md:p-6 rounded-3xl bg-white/60 border border-white shadow-sm fade-in-up delay-300 hover:bg-white/90 transition-colors">
                 <div class="text-3xl md:text-4xl shrink-0">💀</div>
-                <div class="w-20 md:w-24 shrink-0 text-lg md:text-xl font-bold tracking-tight bg-gradient-to-r from-[#FF6B35] to-[#FF3D6B] bg-clip-text text-transparent opacity-60">0-29%</div>
+                <div
+                    class="w-20 md:w-24 shrink-0 text-lg md:text-xl font-bold tracking-tight bg-gradient-to-r from-[#FF6B35] to-[#FF3D6B] bg-clip-text text-transparent opacity-60">
+                    0-29%</div>
                 <div class="text-base md:text-lg font-semibold text-[#1A1714]">Basically NPCs to each other</div>
             </div>
         </div>
@@ -251,45 +320,43 @@
             <p class="text-lg md:text-xl font-semibold text-white/80 mb-12 max-w-xl">
                 Free. No weird stuff. Just the game.
             </p>
-            
+
             <div class="flex flex-col sm:flex-row items-center gap-4">
-                <a href="#" class="inline-flex items-center justify-center gap-2 bg-white rounded-full px-8 py-4 text-base font-bold shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 w-full sm:w-auto">
+                <a href="#"
+                    class="inline-flex items-center justify-center gap-2 bg-white rounded-full px-8 py-4 text-base font-bold shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 w-full sm:w-auto">
                     <iconify-icon icon="ic:baseline-apple" class="text-2xl text-[#FF6B35]"></iconify-icon>
-                    <span class="bg-gradient-to-r from-[#FF6B35] to-[#FF3D6B] bg-clip-text text-transparent">App Store</span>
+                    <span class="bg-gradient-to-r from-[#FF6B35] to-[#FF3D6B] bg-clip-text text-transparent">App
+                        Store</span>
                 </a>
-                <a href="https://buymeacoffee.com/kian_jahangir" target="_blank" class="relative overflow-hidden inline-flex flex-col items-center justify-center pt-[10px] pb-[6px] px-8 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-full shadow-xl hover:bg-white/20 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 w-full sm:w-auto group">
-                    <!-- Coming Soon Ribbon -->
-                    <div class="absolute -right-8 top-3 bg-[#FF6B35] text-white text-[0.6rem] font-black uppercase tracking-widest py-1 px-10 rotate-45 shadow-sm z-10 transition-transform group-hover:scale-110">
-                        SOON
-                    </div>
-                    <div class="flex items-center gap-2 opacity-50 relative z-0">
-                        <iconify-icon icon="uiw:android" class="text-2xl"></iconify-icon>
-                        <span class="text-base font-bold line-through decoration-white/50">Android</span>
-                    </div>
-                    <span class="text-[0.7rem] font-bold text-[#F1DA56] mt-0.5 uppercase tracking-wider group-hover:scale-105 transition-transform">Support to make it soon</span>
+                <a href="#" class="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-full px-8 py-4 text-base font-bold shadow-xl hover:bg-white/20 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 w-full sm:w-auto">
+                    <iconify-icon icon="uiw:android" class="text-2xl text-white"></iconify-icon>
+                    <span>Google Play</span>
                 </a>
             </div>
-            
+
             <p class="mt-8 text-sm font-semibold text-white/60 tracking-wide">Made in California 🌴</p>
         </div>
     </section>
 
     <!-- FOOTER -->
     <footer class="bg-[#1A1714] text-[#F0EEE9] py-12 px-6 md:px-12">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
+        <div
+            class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
             <!-- Logo -->
             <div class="order-1 md:order-1 flex flex-col items-center md:items-start leading-none">
                 <div class="text-3xl lg:text-4xl font-black tracking-tighter font-sans mb-1.5">
-                    <span class="text-[#FC6F61]">G</span><span class="text-[#1DCBAD]">W</span><span class="text-[#F1DA56]">I</span><span class="text-[#9C62C5]">L</span>
+                    <span class="text-[#FC6F61]">G</span><span class="text-[#1DCBAD]">W</span><span
+                        class="text-[#F1DA56]">I</span><span class="text-[#9C62C5]">L</span>
                 </div>
-                <span class="text-[0.65rem] font-bold text-[#F0EEE9] uppercase tracking-[0.2em]">GUESS WHAT I LIKE</span>
+                <span class="text-[0.65rem] font-bold text-[#F0EEE9] uppercase tracking-[0.2em]">GUESS WHAT I
+                    LIKE</span>
             </div>
-            
+
             <!-- Center Message -->
             <div class="font-handwriting text-2xl text-[#F0EEE9]/80 order-3 md:order-2">
                 Invented by Kian 🤙
             </div>
-            
+
             <!-- Links -->
             <div class="flex gap-6 text-sm font-semibold text-[#F0EEE9]/60 order-2 md:order-3">
                 <a href="privacy.html" class="hover:text-[#F0EEE9] transition-colors">Privacy Policy</a>
@@ -299,6 +366,10 @@
     </footer>
 
     <!-- Buy Me A Coffee Widget -->
-    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="kian_jahangir" data-description="Support me on Buy me a coffee!" data-message="If you like my game, you can buy me a coffee (or a juice box)! 🧃" data-color="#FF6B35" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
+        data-id="kian_jahangir" data-description="Support me on Buy me a coffee!"
+        data-message="If you like my game, you can buy me a coffee (or a juice box)! 🧃" data-color="#FF6B35"
+        data-position="Right" data-x_margin="18" data-y_margin="18"></script>
 </body>
+
 </html>
