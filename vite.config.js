@@ -15,7 +15,10 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         privacy: resolve(__dirname, 'privacy.html'),
         terms: resolve(__dirname, 'terms.html'),
-        support: resolve(__dirname, 'support.html')
+        support: resolve(__dirname, 'support.html'),
+        ru: resolve(__dirname, 'ru.html'),
+        fr: resolve(__dirname, 'fr.html'),
+        es: resolve(__dirname, 'es.html')
       }
     }
   }
