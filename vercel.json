@@ -1,6 +1,9 @@
 {
   "cleanUrls": true,
   "rewrites": [
+    { "source": "/ru", "destination": "/ru.html" },
+    { "source": "/fr", "destination": "/fr.html" },
+    { "source": "/es", "destination": "/es.html" },
     { "source": "/support", "destination": "/support.html" },
     { "source": "/privacy", "destination": "/privacy.html" },
     { "source": "/terms", "destination": "/terms.html" }
